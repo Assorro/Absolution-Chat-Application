@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
+	<link href="http://nstracker.epizy.com/images/absolution.png" type="image/x-icon" rel="shortcut icon">
+    <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="gspeak.css" >
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <title>Absolution GSpeak</title>
+  </head>
+  <body>
+	<div class="fire"><span class="fireleft">&nbsp;&nbsp;Abso</span><span class="firecenter">lu</span><span class="fireright">tion&nbsp;&nbsp;</span></div>
+	<section id="welcomeGuest">
+		<center>
+			<div id="change_username">
+				<div class="first_title">WELCOME GUEST</div>
+				<div style="text-align:center; margin:15px 0;" id="total_users"></div>
+				<input id="username" class="input" placeholder="Type username" type="text" />
+				<div id="welcome_error"></div>
+				<button id="send_username" class="button-small2 blue_normal ripple" type="button">Join Chat</button>
+			</div>
+		</center>
+	</section>
+	<div class="chat_container">
+		<div class="media_links">
+			Absolution GSpeak [BETA]
+		</div>
+		<div>
+			<div id="messages_container">
+				<div id="member_data">
+					<center><div id="avatar-container"><img src="absolution.jpg" alt="Absolution"></div></center>
+					<div class="member_name">Absolution</div>
+				</div>
+				<div id="above_log">
+					<section id="input_zone"> 
+						<table class="text_table">
+							<tr>
+								<td>
+									<textarea id="message" name="message" placeholder="Here be dragons!"></textarea>
+								</td>
+								<td style="width:100px;">
+									<button id="send_message" class="button-small rounded3 brown_normal ripple">SEND</button>
+								</td>
+							</tr>
+						</table>
+					</section>
+					<div>
+						<div id="gspeak">
+							<section id="feedback"></section>
+							<section id="chatroom"></section>
+						</div>
+						<div id="youtube" class="youtube_container"><div id="youtube_content"></div></div>
+					</div>
+				</div>
+				<div id="users" style="color:#fff;">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="video_dock">
+		<div id="video_player">
+			<header onclick="lower_dock_window();"><a href="" class="dock-close" onclick="close_dock_window(); return false;">X</a></header>
+			<div id="video_dock_window"></div>
+		</div>
+	</div>
+	<audio id="audio_alert" src="audio/alert.mp3" preload="yes"></audio>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="chat.js"></script>
+  </body>
+</html>
